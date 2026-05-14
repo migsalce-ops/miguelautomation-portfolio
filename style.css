@@ -201,9 +201,11 @@ h2 {
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
   border-radius: 100px;
 }
-.tools-inner span img {
+.tools-inner span img,
+.tools-inner span svg {
   width: 18px; height: 18px; object-fit: contain;
   filter: brightness(0) invert(1); opacity: 0.85;
+  flex-shrink: 0;
 }
 @keyframes scroll-tools { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
