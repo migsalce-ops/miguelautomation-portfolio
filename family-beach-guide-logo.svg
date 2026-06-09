@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Background: transparent -->
+
+  <!-- Sun icon -->
+  <circle cx="22" cy="22" r="9" fill="#1AABBB" />
+  <!-- Sun rays -->
+  <line x1="22" y1="8" x2="22" y2="4" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="22" y1="36" x2="22" y2="40" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="8" y1="22" x2="4" y2="22" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="36" y1="22" x2="40" y2="22" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="12" y1="12" x2="9" y2="9" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="32" y1="32" x2="35" y2="35" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="32" y1="12" x2="35" y2="9" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="12" y1="32" x2="9" y2="35" stroke="#1AABBB" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Wave -->
+  <path d="M2 48 Q8 42 14 48 Q20 54 26 48 Q32 42 38 48 Q44 54 50 48"
+        fill="none" stroke="#1AABBB" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Site name text -->
+  <text x="58" y="26" font-family="Montserrat, Georgia, sans-serif" font-size="15" font-weight="700" fill="#1a2e44" letter-spacing="0.5">The Family Beach Guide</text>
+  <text x="58" y="44" font-family="Montserrat, Georgia, sans-serif" font-size="9" font-weight="400" fill="#5a7a8a" letter-spacing="2">FAMILY TRAVEL · US BEACHES</text>
+</svg>

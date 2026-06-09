@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Website Flipping Roadmap — No-Code Spec Builds</title>
+<style>
+  :root {
+    --bg: #0b0f17;
+    --panel: #121826;
+    --panel-2: #182032;
+    --border: #1f2a3f;
+    --text: #e6ecf5;
+    --muted: #94a3b8;
+    --accent: #4f8cff;
+    --accent-2: #22d3a8;
+    --warn: #f59e0b;
+    --danger: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.55; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 48px 28px 80px; }
+  header { margin-bottom: 36px; }
+  h1 { font-size: 38px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.01em; }
+  h3 { font-size: 16px; margin: 0 0 10px; }
+  .subtitle { color: var(--muted); font-size: 16px; margin: 0; }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--panel-2); color: var(--accent-2); font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; border: 1px solid var(--border); }
+
+  /* Stats row */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 44px; }
+  .stat { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .stat .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat .value { font-size: 22px; font-weight: 700; margin-top: 6px; }
+  .stat .sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
+
+  /* Phase timeline */
+  .phases { position: relative; margin-bottom: 56px; }
+  .phase { display: grid; grid-template-columns: 88px 1fr; gap: 22px; padding: 22px 0; border-bottom: 1px dashed var(--border); }
+  .phase:last-child { border-bottom: none; }
+  .phase-num { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 22px; color: #0b0f17; }
+  .phase-body h3 { font-size: 18px; margin: 4px 0 6px; }
+  .phase-meta { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .phase-body ul { margin: 8px 0 0 18px; padding: 0; }
+  .phase-body li { margin-bottom: 6px; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 6px; background: var(--panel-2); border: 1px solid var(--border); color: var(--accent-2); font-size: 11px; font-weight: 600; margin-right: 6px; }
+
+  /* Two-column grid */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 44px; }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+  .card.warn { border-color: rgba(245, 158, 11, 0.4); }
+  .card h3 { color: var(--accent); }
+  .card.warn h3 { color: var(--warn); }
+  .card ul { margin: 10px 0 0 18px; padding: 0; }
+  .card li { margin-bottom: 6px; }
+
+  /* Niche table */
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 14px; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  tr:last-child td { border-bottom: none; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; }
+  .tag-conv { background: rgba(34, 211, 168, 0.15); color: var(--accent-2); }
+  .tag-price { background: rgba(79, 140, 255, 0.15); color: var(--accent); }
+  .tag-niche { background: rgba(245, 158, 11, 0.15); color: var(--warn); }
+
+  /* Money flow */
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 14px; }
+  .flow-step { background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; position: relative; }
+  .flow-step .amt { font-size: 18px; font-weight: 700; color: var(--accent-2); }
+  .flow-step .lbl { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+  .flow-step.profit { background: linear-gradient(135deg, rgba(34, 211, 168, 0.15), rgba(79, 140, 255, 0.1)); border-color: var(--accent-2); }
+  .flow-step.profit .amt { color: var(--accent-2); font-size: 22px; }
+
+  /* Checklist */
+  .checklist { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+  .check-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .check-item:last-child { border-bottom: none; }
+  .check-box { width: 18px; height: 18px; border: 2px solid var(--accent); border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+  .check-item .desc { flex: 1; }
+  .check-item .time { color: var(--muted); font-size: 12px; white-space: nowrap; }
+
+  /* Edge section */
+  .edge { background: linear-gradient(135deg, rgba(79, 140, 255, 0.08), rgba(34, 211, 168, 0.08)); border: 1px solid var(--accent); border-radius: 12px; padding: 26px; margin-bottom: 44px; }
+  .edge h2 { color: var(--accent-2); }
+  .edge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 18px; }
+  .edge-card { background: rgba(11, 15, 23, 0.5); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .edge-card h4 { margin: 0 0 8px; font-size: 14px; color: var(--accent); }
+  .edge-card p { margin: 0; color: var(--muted); font-size: 13px; }
+
+  section { margin-bottom: 48px; }
+  .section-title { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+  .section-title h2 { margin: 0; }
+  .section-title .num { color: var(--accent); font-weight: 700; }
+
+  footer { color: var(--muted); font-size: 13px; text-align: center; padding-top: 32px; border-top: 1px solid var(--border); }
+
+  @media (max-width: 880px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+    .flow { grid-template-columns: 1fr 1fr; }
+    .edge-grid { grid-template-columns: 1fr; }
+    h1 { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="badge">Side Hustle Roadmap</span>
+  <h1>Website Flipping — No-Code Spec Builds</h1>
+  <p class="subtitle">Build cheap niche sites, list on Flippa, repeat. A volume game with system-level leverage.</p>
+</header>
+
+<!-- STATS ROW -->
+<div class="stats">
+  <div class="stat">
+    <div class="label">Cost / Site</div>
+    <div class="value">$60 – $150</div>
+    <div class="sub">domain + hosting + AI content</div>
+  </div>
+  <div class="stat">
+    <div class="label">Sale Range</div>
+    <div class="value">$300 – $2,000</div>
+    <div class="sub">$3K – $5K outliers possible</div>
+  </div>
+  <div class="stat">
+    <div class="label">Time / Site</div>
+    <div class="value">4 – 10 hrs</div>
+    <div class="sub">2 – 3 hrs once systemized</div>
+  </div>
+  <div class="stat">
+    <div class="label">Flippa Fees</div>
+    <div class="value">$29 + 10%</div>
+    <div class="sub">listing + success fee</div>
+  </div>
+</div>
+
+<!-- ECONOMICS -->
+<section>
+  <div class="section-title"><span class="num">$</span><h2>Economics of One Flip</h2></div>
+  <div class="card">
+    <p style="margin-top:0;color:var(--muted);">Example: site sells for <strong style="color:var(--text)">$800</strong></p>
+    <div class="flow">
+      <div class="flow-step"><div class="amt">$800</div><div class="lbl">Sale Price</div></div>
+      <div class="flow-step"><div class="amt" style="color:var(--danger)">−$29</div><div class="lbl">Listing Fee</div></div>
+      <div class="flow-step"><div class="amt" style="color:var(--danger)">−$80</div><div class="lbl">10% Success</div></div>
+      <div class="flow-step"><div class="amt" style="color:var(--danger)">−$50</div><div class="lbl">Build Cost</div></div>
+      <div class="flow-step profit"><div class="amt">$641</div><div class="lbl">Net Profit</div></div>
+    </div>
+    <p style="color:var(--muted);font-size:13px;margin-top:18px;margin-bottom:0;">Run 4 flips/month at this avg = <strong style="color:var(--accent-2)">~$2,500/mo</strong>. Run 8 with a templated system = <strong style="color:var(--accent-2)">~$5,000/mo</strong>.</p>
+  </div>
+</section>
+
+<!-- 7-PHASE ROADMAP -->
+<section>
+  <div class="section-title"><span class="num">→</span><h2>The 7-Phase Roadmap</h2></div>
+  <div class="phases">
+
+    <div class="phase">
+      <div class="phase-num">1</div>
+      <div class="phase-body">
+        <h3>Pick a Niche That Sells</h3>
+        <div class="phase-meta"><span class="pill">Day 1</span> 30 minutes</div>
+        <ul>
+          <li>Choose from <strong>high-conversion niches</strong> (see table below)</li>
+          <li>Avoid YMYL: health, finance, crypto, gambling</li>
+          <li>Sub-niche it: not "pets" → "reptile care for beginners"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">2</div>
+      <div class="phase-body">
+        <h3>Buy a Clean Domain</h3>
+        <div class="phase-meta"><span class="pill">Day 1</span> $10 – $30</div>
+        <ul>
+          <li><strong>.com only</strong> — others tank resale value</li>
+          <li>2 – 3 words, brandable, 8 – 15 chars, no hyphens or numbers</li>
+          <li>Sources: Namecheap, GoDaddy auctions, Expireddomains.net</li>
+          <li>Aged domains with backlinks = $50 – $200, but adds value at sale</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">3</div>
+      <div class="phase-body">
+        <h3>Build the Site</h3>
+        <div class="phase-meta"><span class="pill">Day 2 – 4</span> 4 – 6 hours</div>
+        <ul>
+          <li><strong>Stack:</strong> WordPress + Astra/Kadence theme on Hostinger ($3/mo) or Cloudways ($10/mo)</li>
+          <li>15 – 30 articles, 1,000 – 2,000 words each (Claude-generated, human-edited)</li>
+          <li>Affiliate links: Amazon Associates + 1 niche program</li>
+          <li>Email opt-in form (Brevo/MailerLite free tier)</li>
+          <li>Logo (Canva), favicon, About / Privacy / Terms pages</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">4</div>
+      <div class="phase-body">
+        <h3>Add Trust Signals</h3>
+        <div class="phase-meta"><span class="pill">Day 4 – 5</span> 1 hour</div>
+        <ul>
+          <li>Connect <strong>Google Analytics</strong> (2.8× more views, 2.4× more watchers per Flippa)</li>
+          <li>Set up Google Search Console + submit sitemap</li>
+          <li>Build 5 – 10 free backlinks (web 2.0s, profile links, Reddit comments)</li>
+          <li>Take screenshots of clean dashboards for the listing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">5</div>
+      <div class="phase-body">
+        <h3>Let It Age</h3>
+        <div class="phase-meta"><span class="pill">Week 2 – 6</span> passive</div>
+        <ul>
+          <li>Site sits 4 – 6 weeks while it indexes — this is critical</li>
+          <li>Even 50 – 200 monthly visitors can <strong>2 – 3× your sale price</strong></li>
+          <li><strong>This is where you build site #2 and #3 in parallel</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">6</div>
+      <div class="phase-body">
+        <h3>List Like a Pitch</h3>
+        <div class="phase-meta"><span class="pill">Week 6</span> 2 hours</div>
+        <ul>
+          <li>Auction format, 7-day duration, <strong>BIN price + lower starting bid</strong></li>
+          <li>Listing must include: niche, monetization path, screenshots, "buyer's roadmap" of next steps</li>
+          <li>Be honest with stats — Flippa verifies via Analytics</li>
+          <li>Use Flippa's free valuation tool as a sanity check</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="phase-num">7</div>
+      <div class="phase-body">
+        <h3>Sell, Then Systemize</h3>
+        <div class="phase-meta"><span class="pill">Week 7+</span> ongoing</div>
+        <ul>
+          <li>First flip goal: <strong>break even or small profit</strong>, learn the platform</li>
+          <li>Replicate the niche/stack that worked</li>
+          <li>Build 3 – 5 in parallel, stagger listings every 2 weeks</li>
+          <li>Volume math: 1 sale/wk × $640 avg net = <strong>$2,560/mo</strong></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NICHE TABLE -->
+<section>
+  <div class="section-title"><span class="num">★</span><h2>Niche Cheat Sheet</h2></div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr><th>Niche</th><th>Why It Sells</th><th>Tag</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Travel</strong></td><td>Highest conversion rate on Flippa — buyers love it</td><td><span class="tag tag-conv">High Conversion</span></td></tr>
+        <tr><td><strong>Food &amp; Drink</strong></td><td>Recipe sites + affiliate gear, evergreen traffic</td><td><span class="tag tag-conv">High Conversion</span></td></tr>
+        <tr><td><strong>Hobbies &amp; Games</strong></td><td>Passionate audiences, easy affiliate hooks</td><td><span class="tag tag-conv">High Conversion</span></td></tr>
+        <tr><td><strong>Automotive</strong></td><td>Highest median sale price; gear / parts affiliate</td><td><span class="tag tag-price">High $</span></td></tr>
+        <tr><td><strong>Style / Fashion</strong></td><td>Visual, ad-friendly, lots of affiliate inventory</td><td><span class="tag tag-price">High $</span></td></tr>
+        <tr><td><strong>Design / Logos</strong></td><td>Tools + tutorials niche; B2B leans</td><td><span class="tag tag-price">High $</span></td></tr>
+        <tr><td><strong>Pets (dog/cat/reptile)</strong></td><td>Top sub-niche, tons of Amazon products</td><td><span class="tag tag-niche">Sub-niche</span></td></tr>
+        <tr><td><strong>Tattoo / Hair</strong></td><td>Profitable sub-niches per Flippa data</td><td><span class="tag tag-niche">Sub-niche</span></td></tr>
+        <tr><td><strong>Fishing / Woodworking</strong></td><td>Hobby + gear affiliate combo</td><td><span class="tag tag-niche">Sub-niche</span></td></tr>
+        <tr><td><strong>Smart Home</strong></td><td>High AOV affiliate, strong buyer intent</td><td><span class="tag tag-niche">Sub-niche</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- DOS AND DONTS -->
+<section>
+  <div class="section-title"><span class="num">!</span><h2>Do This / Avoid This</h2></div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>✓ Do</h3>
+      <ul>
+        <li>Connect Google Analytics before listing</li>
+        <li>Let sites age 4 – 6 weeks for indexing</li>
+        <li>Build 3 – 5 in parallel, stagger listings</li>
+        <li>Use the same stack every time (templates win)</li>
+        <li>Write listings as a roadmap for the buyer</li>
+        <li>Stick to .com, brandable domains</li>
+        <li>Screenshot everything — buyers want proof</li>
+      </ul>
+    </div>
+    <div class="card warn">
+      <h3>✗ Avoid</h3>
+      <ul>
+        <li>YMYL niches (health, finance, legal advice)</li>
+        <li>Crypto, gambling, MMO niches — saturated &amp; flagged</li>
+        <li>Inflating traffic — Flippa verifies, gets you banned</li>
+        <li>One-off flips (margin's too thin without volume)</li>
+        <li>Custom-coded sites (buyers want WordPress)</li>
+        <li>.io, .co, .net domains for spec builds</li>
+        <li>Listing same week the site goes live (no aging)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- YOUR EDGE -->
+<section>
+  <div class="edge">
+    <h2>Your Unfair Advantage</h2>
+    <p style="color:var(--muted);margin:0;">Most TikTok-taught flippers are starting from zero. You aren't. Here's where your existing skills compound:</p>
+    <div class="edge-grid">
+      <div class="edge-card">
+        <h4>1. Claude-Powered Content Pipeline</h4>
+        <p>Build it once: niche + keywords in → publish-ready WordPress export out. Collapses 10-hour builds to 2 – 3 hours. Run sites in parallel.</p>
+      </div>
+      <div class="edge-card">
+        <h4>2. Funnel-Style Listing Pages</h4>
+        <p>Generic Flippa listings convert poorly. Build a public "buyer's preview" landing page linked from the listing — your funnel skills directly raise sale prices.</p>
+      </div>
+      <div class="edge-card">
+        <h4>3. Email Opt-in From Day One</h4>
+        <p>A starter site with even a 30-subscriber list is worth measurably more. Most flippers skip this — you already know how.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIRST FLIP CHECKLIST -->
+<section>
+  <div class="section-title"><span class="num">✓</span><h2>First Flip — Action Checklist</h2></div>
+  <div class="checklist">
+    <div class="check-item"><div class="check-box"></div><div class="desc">Pick 1 niche from high-conversion list</div><div class="time">30 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Buy a .com domain ($10 – $30)</div><div class="time">15 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Set up Hostinger or Cloudways + WordPress</div><div class="time">45 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Install Astra theme + niche-appropriate template</div><div class="time">30 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Build Claude content pipeline + generate 20 – 25 articles</div><div class="time">3 – 4 hrs</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Add affiliate signups (Amazon + 1 niche program)</div><div class="time">30 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Add email opt-in form + Privacy / Terms pages</div><div class="time">30 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Connect Google Analytics + Search Console</div><div class="time">20 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Submit sitemap + build 5 – 10 free backlinks</div><div class="time">45 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Wait 4 – 6 weeks (build site #2 in parallel)</div><div class="time">passive</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Take screenshots of GA + GSC dashboards</div><div class="time">15 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Write Flippa listing (niche, roadmap, screenshots)</div><div class="time">90 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Set BIN + auction price using Flippa valuation tool</div><div class="time">15 min</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Launch 7-day auction → respond to buyer questions</div><div class="time">ongoing</div></div>
+    <div class="check-item"><div class="check-box"></div><div class="desc">Close sale via Flippa Escrow → debrief what worked</div><div class="time">30 min</div></div>
+  </div>
+  <p style="color:var(--muted);font-size:13px;margin-top:14px;"><strong>Total cash at risk:</strong> $60 – $100. <strong>Total active time:</strong> ~6 – 8 hours over 4 – 6 weeks.</p>
+</section>
+
+<footer>
+  Roadmap built for Miguel · Reference document, not financial advice · Update as you learn what works
+</footer>
+
+</div>
+</body>
+</html>
