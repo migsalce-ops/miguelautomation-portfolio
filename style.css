@@ -125,16 +125,24 @@ h2 {
 /* SERVICES */
 .services { padding: 100px 0; background: var(--blue-card); border-top: 1px solid #dbeafe; }
 .services h2 { margin-bottom: 56px; }
-.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .service-card {
   background: var(--white); border: 1px solid var(--border);
-  border-radius: 16px; padding: 32px;
+  border-radius: 16px; padding: 28px;
   transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  position: relative;
 }
 .service-card:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(37,99,235,0.1); }
 .sc-icon { font-size: 2rem; margin-bottom: 14px; }
 .service-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .service-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+.service-practicing { background: linear-gradient(135deg, #eff6ff, #eef2ff); border-color: #c7d2fe; }
+.sc-badge {
+  position: absolute; top: 18px; right: 18px;
+  background: var(--blue); color: #fff;
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.04em;
+  padding: 4px 10px; border-radius: 100px; text-transform: uppercase;
+}
 
 /* ABOUT */
 .about { padding: 100px 0; background: var(--white); border-top: 1px solid var(--border); }
