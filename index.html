@@ -210,6 +210,50 @@
     </div>
   </section>
 
+  <!-- HOW I WORK -->
+  <section id="process" class="process">
+    <div class="container">
+      <p class="section-label">How I Work</p>
+      <h2>Simple process.<br>Zero surprises.</h2>
+      <p class="process-sub">Every project follows the same 4 steps. Clear timelines, clear deliverables, no scope creep, no midproject confusion.</p>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-icon-wrap">
+            <div class="process-icon">🔍</div>
+            <div class="process-step">Step 01</div>
+          </div>
+          <h3>Discovery Call</h3>
+          <p>Free 20 minute consultation to understand your business, your bottlenecks, and what you actually need built. You leave the call with a clear scope.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon-wrap">
+            <div class="process-icon">✏️</div>
+            <div class="process-step">Step 02</div>
+          </div>
+          <h3>Blueprint &amp; Quote</h3>
+          <p>Within 48 hours, you get a written proposal covering exactly what will be built, the timeline, and a fixed price. No hourly billing games.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon-wrap">
+            <div class="process-icon">🛠️</div>
+            <div class="process-step">Step 03</div>
+          </div>
+          <h3>Build &amp; Iterate</h3>
+          <p>I build in short cycles with regular check ins. You see progress, give feedback, and steer the direction. No black box, no month long silence.</p>
+        </div>
+        <div class="process-card">
+          <div class="process-icon-wrap">
+            <div class="process-icon">🚀</div>
+            <div class="process-step">Step 04</div>
+          </div>
+          <h3>Launch &amp; Support</h3>
+          <p>We launch, test in production, and monitor. You get documentation, training, and 30 days of post launch support included on every build.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section id="about" class="about">
     <div class="container about-grid">
@@ -229,6 +273,76 @@
           <div class="av"><span class="check-icon">✓</span> AI generated video &amp; image content</div>
         </div>
         <a href="#contact" class="btn-primary">Work With Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <p class="section-label">Common Questions</p>
+      <h2>Answered before you ask.</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>
+            <span>What's your typical project timeline?</span>
+            <span class="faq-chevron">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Most builds ship within 2 to 4 weeks. Simple funnels and single automations are usually done in 5 to 10 days. Larger web app builds run 4 to 8 weeks depending on scope. You get a firm timeline in your quote before we start.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>How do you charge for your work?</span>
+            <span class="faq-chevron">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Fixed price per project. You get a written quote after the discovery call and that number does not change unless you add new scope. For ongoing clients I also offer monthly retainers for continuous automation and app work.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Do you work with businesses outside your local area?</span>
+            <span class="faq-chevron">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Yes. Most of my work is fully remote. I collaborate with clients across timezones using Slack, Loom, and scheduled calls. Location is not a factor.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>What if I don't know exactly what I need?</span>
+            <span class="faq-chevron">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>That is what the free 20 minute consultation is for. Bring the problem, I bring the solutions. Most clients walk out of that call with 2 or 3 clear options and a rough sense of what each would cost.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Can you work with my existing tools and systems?</span>
+            <span class="faq-chevron">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Almost always. I work across GoHighLevel, Make, Zapier, n8n, WordPress, Stripe, Airtable, Notion, Slack, Google Workspace, and most modern web frameworks. If your stack is not listed, ask and I will tell you honestly.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            <span>Do you provide ongoing support after launch?</span>
+            <span class="faq-chevron">＋</span>
+          </summary>
+          <div class="faq-answer">
+            <p>Every build includes 30 days of post launch support for bugs, tweaks, and questions. After that, you can either self manage using the documentation I provide, or continue with a monthly support retainer.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -323,13 +437,32 @@
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      color: 0x2563eb,        /* blue dots & lines — matches your brand blue */
-      backgroundColor: 0x0d1b40, /* exact navy from your palette */
-      points: 9.00,           /* number of nodes */
-      maxDistance: 22.00,     /* connection reach between nodes */
-      spacing: 18.00,         /* spread of the network */
+      color: 0x2563eb,
+      backgroundColor: 0x0d1b40,
+      points: 9.00,
+      maxDistance: 22.00,
+      spacing: 18.00,
       showDots: true
     });
+
+    /* Scroll fade in animations */
+    (function() {
+      const targets = document.querySelectorAll(
+        '.work-card, .service-card, .ca-card, .process-card, .auto-card, .faq-item, .about-grid, .contact-grid'
+      );
+      targets.forEach(el => el.classList.add('fade-in-target'));
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+      targets.forEach(el => io.observe(el));
+    })();
   </script>
 
 </body>
