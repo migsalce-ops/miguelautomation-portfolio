@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="The 5 core automations Miguel Salcedo builds for clients: Speed to Lead, Document Processing, Follow Up Nurture, Database Reactivation, and Internal Reporting." />
+  <meta name="description" content="The 5 core automations Miguel Salcedo builds for clients: Speed to Lead, Document Processing, Follow Up Nurture, Database Reactivation, and Internal Reporting. Take the free quiz to find out which you need." />
   <meta name="theme-color" content="#0d1b40" />
   <link rel="canonical" href="https://miguelautomation.com/automations.html" />
   <link rel="icon" type="image/jpeg" href="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f795a753f15aff1038a9e.jpg" />
@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://miguelautomation.com/automations.html" />
   <meta property="og:title" content="Core Automations · Miguel Salcedo" />
-  <meta property="og:description" content="The 5 automations I've mastered. Battle tested, documented, and proven to save clients hours every week." />
+  <meta property="og:description" content="The 5 automations I've mastered. Take the quiz to find which one your business needs." />
   <meta property="og:image" content="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f2cf1ba06aeb6dcd5c576.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Core Automations · Miguel Salcedo" />
@@ -22,11 +22,9 @@
   <title>Miguel Salcedo · Core Automations</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </head>
-<body>
+<body class="body-automations">
 
   <a href="#main" class="skip-link">Skip to content</a>
 
@@ -59,92 +57,233 @@
 
   <main id="main">
 
-  <!-- HERO -->
-  <section class="hero" id="vanta-hero">
+  <!-- AUTO HERO -->
+  <section class="auto-hero">
     <div class="container">
-      <div class="page-hero">
-        <p class="hero-label">Core Automations</p>
-        <h1>Five automations<br>I've mastered.</h1>
-        <p>These are the workflows I build over and over for clients. Battle tested, documented, and proven to save hours every week. Every one of these can be running in your business within 14 days.</p>
-        <a href="https://calendly.com/migsalce/miguelautomation" target="_blank" rel="noopener" class="btn-primary">Book a Free Consultation</a>
+      <div class="auto-hero-inner">
+        <p class="auto-eyebrow"><span class="eyebrow-dot"></span> 5 mastered automations · 14 day average build</p>
+        <h1>Automations built<br>to <span class="gradient-text">run themselves.</span></h1>
+        <p class="auto-hero-lead">You already have the leads, the tools, and the team. What you're missing is the plumbing that connects them. Here's what I build.</p>
+        <div class="auto-hero-actions">
+          <a href="#quiz" class="btn-primary">Take the 60 second quiz</a>
+          <a href="#stack" class="btn-ghost-dark">Browse the 5 automations ↓</a>
+        </div>
+      </div>
+
+      <div class="stat-bar">
+        <div class="stat">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Core automations</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">14</div>
+          <div class="stat-label">Day average build</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Fixed price quotes</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">30</div>
+          <div class="stat-label">Days support included</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- AUTOMATIONS GRID -->
-  <section class="automations-list">
+  <!-- INTERACTIVE QUIZ -->
+  <section id="quiz" class="quiz-section">
     <div class="container">
-      <div class="auto-grid">
+      <div class="quiz-header">
+        <p class="section-label">Automation Finder</p>
+        <h2>Which automation<br>will move your needle?</h2>
+        <p class="quiz-intro">Answer 5 quick questions. I'll tell you exactly which of the 5 automations will save you the most time and make you the most money.</p>
+      </div>
 
-        <div class="auto-card">
-          <div class="auto-number">01</div>
-          <div class="auto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg></div>
-          <h2>Speed to Lead</h2>
-          <p class="auto-tagline">Contact every new lead in under 60 seconds.</p>
-          <div class="auto-body">
-            <p><strong>What it does:</strong> The moment a new lead comes in from a form, ad, Facebook page, or landing page, they get an instant text, email, and (optionally) a call from your team. No lag. No lead going cold.</p>
-            <p><strong>Why it matters:</strong> Leads contacted within 5 minutes are up to 21x more likely to convert than leads contacted an hour later. Most businesses respond in hours or days. This closes that gap.</p>
-          </div>
-          <div class="auto-tags">
-            <span>GoHighLevel</span><span>Twilio</span><span>Make</span><span>Zapier</span>
-          </div>
+      <div class="quiz-widget" id="quiz-widget">
+        <div class="quiz-progress-wrap">
+          <div class="quiz-progress-track"><div class="quiz-progress-bar" id="quiz-progress-bar"></div></div>
+          <div class="quiz-progress-text">Question <span id="q-current">1</span> of 5</div>
         </div>
 
-        <div class="auto-card">
-          <div class="auto-number">02</div>
-          <div class="auto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></div>
-          <h2>Document Processing</h2>
-          <p class="auto-tagline">Read, extract, and route documents automatically.</p>
-          <div class="auto-body">
-            <p><strong>What it does:</strong> AI powered intake for contracts, invoices, intake forms, and PDFs. The system reads the document, pulls out the key data (names, dates, amounts, IDs), and pushes it straight into your CRM, spreadsheet, or the right person's inbox.</p>
-            <p><strong>Why it matters:</strong> Cuts hours of manual data entry per week, kills copy paste errors, and gives your admin team back their afternoons.</p>
-          </div>
-          <div class="auto-tags">
-            <span>OpenAI</span><span>Claude</span><span>n8n</span><span>Airtable</span>
-          </div>
-        </div>
+        <div class="quiz-slides" id="quiz-slides">
 
-        <div class="auto-card">
-          <div class="auto-number">03</div>
-          <div class="auto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-          <h2>Follow Up Nurture Sequence</h2>
-          <p class="auto-tagline">Keep every lead warm until they're ready to buy.</p>
-          <div class="auto-body">
-            <p><strong>What it does:</strong> Multi touch nurture sequences across email, SMS, and voicemail drops. Personalized timing, branching based on lead behaviour, and automatic pausing the moment a lead books or replies.</p>
-            <p><strong>Why it matters:</strong> Most sales happen after the fifth touchpoint. Manual follow up almost always breaks down by touch two. Automated nurture keeps working while you sleep.</p>
+          <div class="quiz-slide active" data-q="1">
+            <h3>Where are you losing the most time right now?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-boosts='{"speed":3,"nurture":1}'>New leads slipping through the cracks</button>
+              <button class="quiz-option" data-boosts='{"docs":3}'>Drowning in manual data entry and paperwork</button>
+              <button class="quiz-option" data-boosts='{"nurture":3,"speed":1}'>Following up feels like a full time job</button>
+              <button class="quiz-option" data-boosts='{"reactivation":3}'>Old leads sitting cold in the CRM</button>
+              <button class="quiz-option" data-boosts='{"reporting":3}'>Can't tell what's actually working in my business</button>
+            </div>
           </div>
-          <div class="auto-tags">
-            <span>GoHighLevel</span><span>Mailchimp</span><span>Twilio</span><span>SMS &amp; Email</span>
-          </div>
-        </div>
 
-        <div class="auto-card">
-          <div class="auto-number">04</div>
-          <div class="auto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
-          <h2>Database Reactivation</h2>
-          <p class="auto-tagline">Wake up cold leads and past clients for new revenue.</p>
-          <div class="auto-body">
-            <p><strong>What it does:</strong> Targeted reactivation campaigns for the leads and clients already sitting in your CRM. Personalized outreach that gets replies, books calls, and drives repeat business from contacts you thought were gone.</p>
-            <p><strong>Why it matters:</strong> The cheapest source of new revenue is your existing database. Most businesses ignore it. A single reactivation campaign can pay for six months of automation work.</p>
+          <div class="quiz-slide" data-q="2">
+            <h3>How fast do you follow up with new leads today?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-boosts='{}'>Within a few minutes, we're on it</button>
+              <button class="quiz-option" data-boosts='{"speed":1}'>Within an hour or two</button>
+              <button class="quiz-option" data-boosts='{"speed":2,"nurture":1}'>Same day, usually</button>
+              <button class="quiz-option" data-boosts='{"speed":3,"nurture":2}'>Honestly, sometimes days go by</button>
+            </div>
           </div>
-          <div class="auto-tags">
-            <span>GoHighLevel</span><span>Segmentation</span><span>Email &amp; SMS</span><span>CRM</span>
-          </div>
-        </div>
 
-        <div class="auto-card">
-          <div class="auto-number">05</div>
-          <div class="auto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
-          <h2>Internal Reporting Automations</h2>
-          <p class="auto-tagline">Live dashboards, delivered to your team.</p>
-          <div class="auto-body">
-            <p><strong>What it does:</strong> Pulls data from your CRM, ads, sales tools, and ops platforms into a single live dashboard or a scheduled report delivered to Slack, email, or Google Sheets. Choose your metrics, choose your cadence.</p>
-            <p><strong>Why it matters:</strong> Real time visibility across the business without paying an analyst or logging into eight tools every morning. You see the numbers that matter, when they matter.</p>
+          <div class="quiz-slide" data-q="3">
+            <h3>How many documents, forms, or intakes do you process weekly?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-boosts='{}'>Almost none, we're a service business</button>
+              <button class="quiz-option" data-boosts='{"docs":1}'>Under 20, but they take real time</button>
+              <button class="quiz-option" data-boosts='{"docs":2}'>20 to 100 per week</button>
+              <button class="quiz-option" data-boosts='{"docs":3}'>100+ and it's crushing my team</button>
+            </div>
           </div>
-          <div class="auto-tags">
-            <span>Make</span><span>n8n</span><span>Google Sheets</span><span>Slack</span><span>Airtable</span>
+
+          <div class="quiz-slide" data-q="4">
+            <h3>How big is your database of past leads and clients?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-boosts='{}'>Small, under a few hundred</button>
+              <button class="quiz-option" data-boosts='{"reactivation":1}'>A few hundred, but not really organized</button>
+              <button class="quiz-option" data-boosts='{"reactivation":3}'>Thousands, and we haven't touched most of them in months</button>
+              <button class="quiz-option" data-boosts='{"reactivation":2,"reporting":1}'>Massive database, no idea what's in there anymore</button>
+            </div>
           </div>
+
+          <div class="quiz-slide" data-q="5">
+            <h3>How do you currently track your business metrics?</h3>
+            <div class="quiz-options">
+              <button class="quiz-option" data-boosts='{}'>Real time dashboards, we're dialled in</button>
+              <button class="quiz-option" data-boosts='{"reporting":1}'>Spreadsheets we update manually</button>
+              <button class="quiz-option" data-boosts='{"reporting":2}'>I log into 5 different tools every morning</button>
+              <button class="quiz-option" data-boosts='{"reporting":3}'>Truthfully? I don't really track them</button>
+            </div>
+          </div>
+
+          <div class="quiz-slide quiz-result" data-q="result">
+            <div class="result-badge">Your Automation Playbook</div>
+            <h3 id="result-headline">Based on your answers, here's what to build first.</h3>
+            <div class="result-list" id="result-list"></div>
+            <div class="result-cta">
+              <a href="https://calendly.com/migsalce/miguelautomation" target="_blank" rel="noopener" class="btn-primary">Book a consultation about these</a>
+              <button class="btn-ghost-dark" id="quiz-restart">Retake the quiz</button>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 AUTOMATIONS STACK -->
+  <section id="stack" class="stack-section">
+    <div class="container">
+      <div class="stack-header">
+        <p class="section-label">The Full Menu</p>
+        <h2>Every automation, in detail.</h2>
+        <p class="stack-intro">Each of these has been built, shipped, and battle tested for real clients. Click any one to jump straight to booking a build.</p>
+      </div>
+
+      <div class="stack-list">
+
+        <article class="stack-item">
+          <div class="stack-visual">
+            <div class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg></div>
+            <div class="stack-badge">01</div>
+          </div>
+          <div class="stack-body">
+            <p class="stack-tagline">Contact every new lead in under 60 seconds</p>
+            <h3>Speed to Lead</h3>
+            <p>Instant SMS, email, and optional call to every lead the moment they hit your form, ad, or landing page. No lag. No cold leads.</p>
+            <ul class="stack-outcomes">
+              <li>Up to 21x higher conversion vs delayed follow up</li>
+              <li>Runs 24/7 including nights and weekends</li>
+              <li>Auto pauses when the lead replies or books</li>
+            </ul>
+            <div class="stack-stack">
+              <span>GoHighLevel</span><span>Twilio</span><span>Make</span><span>Zapier</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-item stack-alt">
+          <div class="stack-visual">
+            <div class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg></div>
+            <div class="stack-badge">02</div>
+          </div>
+          <div class="stack-body">
+            <p class="stack-tagline">Read, extract, and route documents automatically</p>
+            <h3>Document Processing</h3>
+            <p>AI reads incoming PDFs, forms, contracts, and invoices. Pulls out the key data. Pushes it into your CRM, spreadsheet, or the right person's inbox.</p>
+            <ul class="stack-outcomes">
+              <li>Cuts hours of manual data entry every week</li>
+              <li>Kills copy paste errors at the source</li>
+              <li>Scales from 10 to 1,000 documents without extra headcount</li>
+            </ul>
+            <div class="stack-stack">
+              <span>OpenAI</span><span>Claude</span><span>n8n</span><span>Airtable</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-item">
+          <div class="stack-visual">
+            <div class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <div class="stack-badge">03</div>
+          </div>
+          <div class="stack-body">
+            <p class="stack-tagline">Keep every lead warm until they're ready to buy</p>
+            <h3>Follow Up Nurture Sequence</h3>
+            <p>Multi touch sequences across email, SMS, and voicemail drops. Branches based on behaviour. Auto pauses when a lead books or replies.</p>
+            <ul class="stack-outcomes">
+              <li>Most sales happen after touch 5+, manual follow up dies at touch 2</li>
+              <li>Runs quietly in the background while you focus on hot leads</li>
+              <li>Delivers your voice, not a generic template</li>
+            </ul>
+            <div class="stack-stack">
+              <span>GoHighLevel</span><span>Mailchimp</span><span>Twilio</span><span>SMS &amp; Email</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-item stack-alt">
+          <div class="stack-visual">
+            <div class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+            <div class="stack-badge">04</div>
+          </div>
+          <div class="stack-body">
+            <p class="stack-tagline">Wake up cold leads and past clients for new revenue</p>
+            <h3>Database Reactivation</h3>
+            <p>Targeted campaigns to the leads and clients already in your CRM. Personalized messaging that gets replies, books calls, and reopens sales.</p>
+            <ul class="stack-outcomes">
+              <li>Cheapest new revenue source you already own</li>
+              <li>Usually pays for 6 months of automation work in a single campaign</li>
+              <li>Segments by activity, spend, and status automatically</li>
+            </ul>
+            <div class="stack-stack">
+              <span>GoHighLevel</span><span>Segmentation</span><span>Email &amp; SMS</span><span>CRM</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="stack-item">
+          <div class="stack-visual">
+            <div class="stack-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
+            <div class="stack-badge">05</div>
+          </div>
+          <div class="stack-body">
+            <p class="stack-tagline">Live dashboards, delivered to your team</p>
+            <h3>Internal Reporting Automations</h3>
+            <p>Pulls data from your CRM, ads, sales, and ops tools into a single live dashboard or a scheduled report delivered to Slack, email, or Google Sheets.</p>
+            <ul class="stack-outcomes">
+              <li>Real time visibility without paying for an analyst</li>
+              <li>Choose your metrics and your cadence</li>
+              <li>Replaces your morning "log into 8 tabs" routine</li>
+            </ul>
+            <div class="stack-stack">
+              <span>Make</span><span>n8n</span><span>Google Sheets</span><span>Slack</span><span>Airtable</span>
+            </div>
+          </div>
+        </article>
 
       </div>
     </div>
@@ -195,23 +334,6 @@
   </footer>
 
   <script>
-    VANTA.NET({
-      el: "#vanta-hero",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0x2563eb,
-      backgroundColor: 0x0d1b40,
-      points: 9.00,
-      maxDistance: 22.00,
-      spacing: 18.00,
-      showDots: true
-    });
-
     /* Back to top button visibility */
     (function() {
       const btn = document.getElementById('back-to-top');
@@ -219,6 +341,132 @@
       const toggle = () => btn.classList.toggle('visible', window.scrollY > 600);
       window.addEventListener('scroll', toggle, { passive: true });
       toggle();
+    })();
+
+    /* Interactive Automation Quiz */
+    (function() {
+      const AUTOMATIONS = {
+        speed: {
+          name: 'Speed to Lead',
+          desc: 'Contact every new lead in under 60 seconds via instant SMS, email, and optional call.',
+          icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg>'
+        },
+        docs: {
+          name: 'Document Processing',
+          desc: 'AI reads your documents, extracts key data, and routes it into your systems automatically.',
+          icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg>'
+        },
+        nurture: {
+          name: 'Follow Up Nurture Sequence',
+          desc: 'Multi touch nurture across email, SMS, and voicemail. Keeps leads warm without your input.',
+          icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>'
+        },
+        reactivation: {
+          name: 'Database Reactivation',
+          desc: 'Wake up old leads and past clients with targeted campaigns. Cheapest revenue you already own.',
+          icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>'
+        },
+        reporting: {
+          name: 'Internal Reporting Automations',
+          desc: 'Live dashboards and scheduled reports pulling from every tool you use, delivered where you look.',
+          icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg>'
+        }
+      };
+
+      const scores = { speed:0, docs:0, nurture:0, reactivation:0, reporting:0 };
+      const slides = document.querySelectorAll('.quiz-slide');
+      const totalQuestions = 5;
+      let currentQuestion = 1;
+
+      const progressBar = document.getElementById('quiz-progress-bar');
+      const currentText = document.getElementById('q-current');
+      const resultList = document.getElementById('result-list');
+      const resultHeadline = document.getElementById('result-headline');
+
+      function updateProgress() {
+        const percent = ((currentQuestion - 1) / totalQuestions) * 100;
+        progressBar.style.width = percent + '%';
+        currentText.textContent = Math.min(currentQuestion, totalQuestions);
+      }
+
+      function goToSlide(n) {
+        slides.forEach(s => s.classList.remove('active'));
+        const target = document.querySelector('.quiz-slide[data-q="' + n + '"]');
+        if (target) target.classList.add('active');
+        currentQuestion = typeof n === 'number' ? n : totalQuestions + 1;
+        updateProgress();
+      }
+
+      function calcResults() {
+        const sorted = Object.entries(scores).sort((a,b) => b[1] - a[1]);
+        const maxScore = sorted[0][1] || 1;
+        const top3 = sorted.slice(0, 3);
+
+        if (top3[0][1] === 0) {
+          resultHeadline.textContent = "You're already running lean! Let's talk about what's next.";
+          resultList.innerHTML = '<div class="result-empty">Nothing screamed "urgent fix" in your answers. That means you\'re probably ready to level up. Let\'s find one automation to give you a real edge.</div>';
+          return;
+        }
+
+        resultHeadline.textContent = 'Build these ' + top3.filter(x => x[1] > 0).length + ' first.';
+        resultList.innerHTML = top3.filter(x => x[1] > 0).map(([key, score], i) => {
+          const a = AUTOMATIONS[key];
+          const matchPercent = Math.min(100, Math.round((score / (maxScore + 2)) * 100) + 40);
+          const rank = ['#1 Priority', '#2 Priority', '#3 Priority'][i];
+          return '<div class="result-item">' +
+            '<div class="result-icon">' + a.icon + '</div>' +
+            '<div class="result-detail">' +
+              '<div class="result-rank">' + rank + '</div>' +
+              '<h4>' + a.name + '</h4>' +
+              '<p>' + a.desc + '</p>' +
+            '</div>' +
+            '<div class="result-match"><div class="match-num">' + matchPercent + '%</div><div class="match-label">match</div></div>' +
+          '</div>';
+        }).join('');
+      }
+
+      document.querySelectorAll('.quiz-option').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const boosts = JSON.parse(this.dataset.boosts || '{}');
+          Object.entries(boosts).forEach(([key, val]) => { scores[key] = (scores[key] || 0) + val; });
+
+          const parent = this.closest('.quiz-slide');
+          parent.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+          this.classList.add('selected');
+
+          setTimeout(() => {
+            const nextQ = currentQuestion + 1;
+            if (nextQ > totalQuestions) {
+              calcResults();
+              goToSlide('result');
+              progressBar.style.width = '100%';
+              currentText.textContent = totalQuestions;
+            } else {
+              goToSlide(nextQ);
+            }
+          }, 320);
+        });
+      });
+
+      document.getElementById('quiz-restart')?.addEventListener('click', () => {
+        Object.keys(scores).forEach(k => scores[k] = 0);
+        document.querySelectorAll('.quiz-option.selected').forEach(b => b.classList.remove('selected'));
+        goToSlide(1);
+      });
+
+      updateProgress();
+    })();
+
+    /* Scroll fade in for automation stack items */
+    (function() {
+      const targets = document.querySelectorAll('.stack-item, .stat');
+      targets.forEach(el => el.classList.add('fade-in-target'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('fade-in-visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      targets.forEach(el => io.observe(el));
     })();
   </script>
 
