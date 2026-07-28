@@ -63,14 +63,34 @@
   <section class="hero" id="vanta-hero">
     <div class="container hero-grid">
       <div class="hero-text">
+        <div class="hero-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Available for new projects</span>
+        </div>
         <p class="hero-label">Web Apps · Funnels · Automations · Design · AI Video &amp; Image</p>
-        <h1>I build the systems<br>your business runs on.</h1>
+        <h1>I build the systems<br><span class="hero-accent">your business runs on.</span></h1>
         <p>Custom web apps, high converting funnels, workflow automations, and clean design. All built to make your business run smoother and scale faster. One person, full stack, done right.</p>
-        <a href="https://calendly.com/migsalce/miguelautomation" target="_blank" rel="noopener" class="btn-primary">Book a Free Consultation</a>
+        <div class="hero-cta-group">
+          <a href="https://calendly.com/migsalce/miguelautomation" target="_blank" rel="noopener" class="btn-primary">Book a Free Consultation</a>
+          <a href="#work" class="btn-ghost">See my work</a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><strong>Fixed price</strong><span>quotes only</span></div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item"><strong>14 day</strong><span>average build</span></div>
+          <div class="trust-divider" aria-hidden="true"></div>
+          <div class="trust-item"><strong>30 days</strong><span>support included</span></div>
+        </div>
       </div>
-      <div class="hero-photo">
-        <div class="photo-circle">
-          <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f2cf1ba06aeb6dcd5c576.jpg" alt="Miguel Salcedo" />
+      <div class="hero-visual">
+        <div class="photo-orbit">
+          <div class="photo-circle">
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f2cf1ba06aeb6dcd5c576.jpg" alt="Miguel Salcedo" />
+          </div>
+          <div class="orbit-badge orbit-badge-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L4 14h7l-1 7 9-11h-7l1-7z"/></svg></div>
+          <div class="orbit-badge orbit-badge-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="orbit-badge orbit-badge-3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
+          <div class="orbit-badge orbit-badge-4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         </div>
       </div>
     </div>
@@ -79,69 +99,87 @@
   <!-- WORK -->
   <section id="work" class="work">
     <div class="container">
-      <p class="section-label">Recent Workflow Builds</p>
-      <h2>Real automations.<br>Shipped for real clients.</h2>
-      <div class="work-grid">
+      <div class="work-header">
+        <p class="section-label">Recent Workflow Builds</p>
+        <h2>Real automations.<br>Shipped for real clients.</h2>
+        <p class="work-lead">Every one of these solved a specific bottleneck for a specific business. Hover any card to see the details.</p>
+      </div>
 
-        <div class="work-card">
-          <div class="work-img">
-            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a3367583726d52b5c6c229.png" alt="Lead Magnet Funnels" />
-          </div>
-          <div class="work-label">
-            <span class="check-icon">✓</span>
-            Lead Magnet Funnels to Capture more Sales
-          </div>
-        </div>
+      <div class="work-bento">
 
-        <div class="work-card">
+        <a href="#contact" class="work-item work-featured">
+          <span class="work-tag work-tag-funnel">Funnel</span>
           <div class="work-img">
-            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a39844167da404218abdb6.webp" alt="Lead Prioritization" />
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a3367583726d52b5c6c229.png" alt="Lead Magnet Funnels dashboard" loading="lazy" />
           </div>
-          <div class="work-label">
-            <span class="check-icon">✓</span>
-            Lead Prioritization Workflow
+          <div class="work-body">
+            <h3>Lead Magnet Funnels</h3>
+            <p>Full funnel build with landing pages, opt in forms, and automated delivery. Every lead captured, tagged, and routed into the right nurture sequence.</p>
+            <div class="work-stack">
+              <span>GoHighLevel</span><span>Stripe</span><span>Custom Design</span>
+            </div>
           </div>
-        </div>
+        </a>
 
-        <div class="work-card">
+        <a href="#contact" class="work-item">
+          <span class="work-tag work-tag-automation">Automation</span>
           <div class="work-img">
-            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27d04aa1b72fad91dc829.webp" alt="Xero Asana Sync" />
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a39844167da404218abdb6.webp" alt="Lead Prioritization Workflow" loading="lazy" />
           </div>
-          <div class="work-label">
-            <span class="check-icon">✓</span>
-            Xero to Asana Financial Sync
+          <div class="work-body">
+            <h3>Lead Prioritization Workflow</h3>
+            <p>Auto scoring and routing that pushes hot leads to the top of the pipeline.</p>
+            <div class="work-stack"><span>Make</span><span>Google Sheets</span></div>
           </div>
-        </div>
+        </a>
 
-        <div class="work-card">
+        <a href="#contact" class="work-item">
+          <span class="work-tag work-tag-integration">Integration</span>
           <div class="work-img">
-            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27d60167da44b3f52da30.webp" alt="AI Facebook Responder" />
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27d04aa1b72fad91dc829.webp" alt="Xero to Asana Financial Sync" loading="lazy" />
           </div>
-          <div class="work-label">
-            <span class="check-icon">✓</span>
-            AI Facebook Page Responder
+          <div class="work-body">
+            <h3>Xero to Asana Financial Sync</h3>
+            <p>Every invoice paid in Xero triggers task updates in Asana. No manual reconciliation.</p>
+            <div class="work-stack"><span>Xero</span><span>Asana</span><span>n8n</span></div>
           </div>
-        </div>
+        </a>
 
-        <div class="work-card">
+        <a href="#contact" class="work-item">
+          <span class="work-tag work-tag-ai">AI</span>
           <div class="work-img">
-            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27d1b753f15a2fb12b7cf.webp" alt="CRM Follow Up Sequences" />
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27d60167da44b3f52da30.webp" alt="AI Facebook Page Responder" loading="lazy" />
           </div>
-          <div class="work-label">
-            <span class="check-icon">✓</span>
-            CRM Follow Up Sequences
+          <div class="work-body">
+            <h3>AI Facebook Page Responder</h3>
+            <p>AI first response on every Facebook message, escalating warm ones to a human.</p>
+            <div class="work-stack"><span>OpenAI</span><span>Meta API</span><span>Make</span></div>
           </div>
-        </div>
+        </a>
 
-        <div class="work-card">
+        <a href="#contact" class="work-item">
+          <span class="work-tag work-tag-automation">Automation</span>
           <div class="work-img">
-            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27ce6b617a7b195f0db36.webp" alt="AI Voice Booking" />
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27d1b753f15a2fb12b7cf.webp" alt="CRM Follow Up Sequences" loading="lazy" />
           </div>
-          <div class="work-label">
-            <span class="check-icon">✓</span>
-            AI Voice Booking System
+          <div class="work-body">
+            <h3>CRM Follow Up Sequences</h3>
+            <p>Multi channel nurture across email, SMS, and voicemail with branching logic.</p>
+            <div class="work-stack"><span>GoHighLevel</span><span>Twilio</span></div>
           </div>
-        </div>
+        </a>
+
+        <a href="#contact" class="work-item">
+          <span class="work-tag work-tag-ai">AI</span>
+          <div class="work-img">
+            <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/69a27ce6b617a7b195f0db36.webp" alt="AI Voice Booking System" loading="lazy" />
+          </div>
+          <div class="work-body">
+            <h3>AI Voice Booking System</h3>
+            <p>AI voice agent answers calls, qualifies leads, and books appointments 24/7.</p>
+            <div class="work-stack"><span>OpenAI</span><span>Twilio</span><span>Calendly</span></div>
+          </div>
+        </a>
 
       </div>
     </div>
