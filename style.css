@@ -206,6 +206,63 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
 .footer-links a { color: rgba(255,255,255,0.4); font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--white); }
 
+/* PAGE HERO (single-column, for subpages) */
+.page-hero { max-width: 780px; position: relative; z-index: 1; }
+.page-hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 800;
+  line-height: 1.08; letter-spacing: -0.03em;
+  color: var(--white); margin: 18px 0 22px;
+}
+.page-hero p {
+  color: rgba(255,255,255,0.7); font-size: 1.05rem;
+  max-width: 620px; margin-bottom: 36px; line-height: 1.75;
+}
+
+/* AUTOMATIONS LIST PAGE */
+.automations-list { padding: 100px 0; background: var(--white); }
+.auto-grid { display: flex; flex-direction: column; gap: 24px; }
+.auto-card {
+  background: var(--blue-card); border: 1px solid #dbeafe;
+  border-radius: 20px; padding: 40px;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  position: relative;
+}
+.auto-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,99,235,0.12); border-color: var(--blue); }
+.auto-number {
+  position: absolute; top: 32px; right: 40px;
+  font-size: 3rem; font-weight: 800; color: rgba(37,99,235,0.15);
+  letter-spacing: -0.03em; line-height: 1;
+}
+.auto-icon { font-size: 2.2rem; margin-bottom: 16px; }
+.auto-card h2 {
+  font-size: 1.6rem; font-weight: 800; color: var(--navy);
+  letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.15;
+}
+.auto-tagline {
+  font-size: 1rem; font-weight: 600; color: var(--blue);
+  margin-bottom: 20px;
+}
+.auto-body p {
+  color: var(--muted); font-size: 0.95rem; line-height: 1.75; margin-bottom: 12px;
+}
+.auto-body p strong { color: var(--navy); font-weight: 700; }
+.auto-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.auto-tags span {
+  font-size: 0.75rem; font-weight: 600; padding: 5px 12px;
+  border-radius: 100px; background: var(--white);
+  border: 1px solid var(--border); color: var(--navy);
+}
+
+/* SERVICE CARD LINK */
+.sc-link {
+  display: inline-block; margin-top: 14px;
+  font-size: 0.85rem; font-weight: 600; color: var(--blue);
+  text-decoration: none; transition: color 0.2s;
+}
+.sc-link:hover { color: var(--blue2); }
+.sc-link::after { content: ' \2192'; transition: transform 0.2s; display: inline-block; }
+.sc-link:hover::after { transform: translateX(3px); }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; text-align: center; }
@@ -221,4 +278,7 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
   .menu-toggle { display: flex; }
   .services-grid { grid-template-columns: 1fr; }
   .hero { padding: 110px 0 60px; }
+  .auto-card { padding: 28px 24px; }
+  .auto-number { top: 22px; right: 24px; font-size: 2.2rem; }
+  .auto-card h2 { font-size: 1.3rem; padding-right: 40px; }
 }
