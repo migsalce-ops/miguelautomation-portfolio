@@ -217,6 +217,39 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
 .footer-links a { color: rgba(255,255,255,0.4); font-size: 0.8rem; text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--white); }
 
+/* CORE AUTOMATIONS SECTION (on home page) */
+.core-automations { padding: 100px 0; background: var(--navy); }
+.core-automations h2 { color: var(--white); margin-bottom: 16px; }
+.ca-sub { color: rgba(255,255,255,0.6); font-size: 1rem; max-width: 620px; margin-bottom: 56px; line-height: 1.75; }
+.ca-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-bottom: 48px;
+}
+.ca-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 28px;
+  transition: border-color 0.25s, transform 0.25s, background 0.25s;
+  position: relative; display: flex; flex-direction: column; gap: 8px;
+  text-decoration: none;
+}
+.ca-card:hover {
+  border-color: var(--blue); transform: translateY(-4px);
+  background: rgba(37,99,235,0.08);
+}
+.ca-number {
+  position: absolute; top: 20px; right: 24px;
+  font-size: 1.8rem; font-weight: 800; color: rgba(37,99,235,0.35);
+  letter-spacing: -0.02em; line-height: 1;
+}
+.ca-icon { font-size: 1.8rem; margin-bottom: 6px; }
+.ca-card h3 {
+  font-size: 1.05rem; font-weight: 700; color: var(--white);
+  line-height: 1.3; padding-right: 40px;
+}
+.ca-card p { color: rgba(255,255,255,0.6); font-size: 0.875rem; line-height: 1.6; }
+.ca-cta { text-align: center; }
+
 /* PAGE HERO (single-column, for subpages) */
 .page-hero { max-width: 780px; position: relative; z-index: 1; }
 .page-hero h1 {
@@ -284,6 +317,7 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .work-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ca-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
   nav ul { display: none; }
@@ -293,4 +327,5 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
   .auto-card { padding: 28px 24px; }
   .auto-number { top: 22px; right: 24px; font-size: 2.2rem; }
   .auto-card h2 { font-size: 1.3rem; padding-right: 40px; }
+  .ca-grid { grid-template-columns: 1fr; }
 }
