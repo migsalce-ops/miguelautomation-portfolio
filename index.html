@@ -3,6 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Miguel Salcedo builds custom web apps, high converting funnels, workflow automations, and clean design for small businesses and growing brands. Book a free 20 minute consultation." />
+  <meta name="theme-color" content="#0d1b40" />
+  <link rel="canonical" href="https://miguelautomation.com/" />
+  <link rel="icon" type="image/jpeg" href="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f795a753f15aff1038a9e.jpg" />
+  <link rel="apple-touch-icon" href="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f795a753f15aff1038a9e.jpg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://miguelautomation.com/" />
+  <meta property="og:title" content="Miguel Salcedo · Web Apps, Funnels, Automations, Design" />
+  <meta property="og:description" content="One builder, every layer of your business. Custom web apps, high converting funnels, workflow automations, and clean design." />
+  <meta property="og:image" content="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f2cf1ba06aeb6dcd5c576.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Miguel Salcedo · Web Apps, Funnels, Automations, Design" />
+  <meta name="twitter:description" content="One builder, every layer of your business. Book a free consultation." />
+  <meta name="twitter:image" content="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f2cf1ba06aeb6dcd5c576.jpg" />
+
   <title>Miguel Salcedo · Web Apps · Funnels · Automations · Design · AI Video &amp; Image</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,11 +28,13 @@
 </head>
 <body>
 
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- NAV -->
-  <nav>
+  <nav aria-label="Primary">
     <div class="nav-inner">
-      <a href="#" class="logo">
-        <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f795a753f15aff1038a9e.jpg" alt="Miguel Automation Logo" />
+      <a href="#" class="logo" aria-label="Miguel Automation home">
+        <img src="https://assets.cdn.filesafe.space/KxctVRUvvdhRZoBokoiv/media/699f795a753f15aff1038a9e.jpg" alt="" />
         Miguel Automation
       </a>
       <ul>
@@ -26,7 +44,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="menu-toggle" onclick="document.querySelector('.nav-mobile').classList.toggle('open')">
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="const m=document.querySelector('.nav-mobile');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -38,6 +56,8 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
+
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero" id="vanta-hero">
@@ -59,8 +79,8 @@
   <!-- WORK -->
   <section id="work" class="work">
     <div class="container">
-      <p class="section-label">Workflow Builds</p>
-      <h2>Funnels / Automation</h2>
+      <p class="section-label">Recent Workflow Builds</p>
+      <h2>Real automations.<br>Shipped for real clients.</h2>
       <div class="work-grid">
 
         <div class="work-card">
@@ -410,6 +430,13 @@
     </div>
   </section>
 
+  </main>
+
+  <!-- BACK TO TOP -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <span aria-hidden="true">↑</span>
+  </button>
+
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
@@ -462,6 +489,15 @@
       }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
 
       targets.forEach(el => io.observe(el));
+    })();
+
+    /* Back to top button visibility */
+    (function() {
+      const btn = document.getElementById('back-to-top');
+      if (!btn) return;
+      const toggle = () => btn.classList.toggle('visible', window.scrollY > 600);
+      window.addEventListener('scroll', toggle, { passive: true });
+      toggle();
     })();
   </script>
 
